@@ -1,0 +1,17 @@
+Config { font = "-misc-fixed-*-*-*-*-12-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 100
+       , commands = [ Run Cpu ["-t","T:<total>%D:<iowait>%","-L","3","-H","50","--normal","green","--high","red"] 50
+                    , Run Memory ["-t","M:<usedratio>%"] 50
+                    , Run Swap ["-t","S:<used>M"] 50
+                    , Run Date "%a %b %_d %k:%M:%S" "date" 50
+                    , Run Battery ["-t","<watts>W<left>(<timeleft>)","-L","15","-l","red","--","-p","green"] 50
+                    , Run Wireless "wlan0" ["-L","30","-H","80","--low","red","--high","green"] 50
+                    , Run CommandReader "/home/matthias/scripts/notify-volume.sh" "vol"
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% %battery% %vol% %wlan0wi% <fc=#ee9a00>%date%</fc>"
+       }

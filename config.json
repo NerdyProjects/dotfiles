@@ -4,6 +4,16 @@
       "path": "~/.zshrc",
       "guid": "dac8df79-582e-b53f-3354-37f51765bacb",
       "tags": {}
+    },
+    {
+      "path": "~/.xmonad/xmonad.hs",
+      "guid": "c1fc5da3-0368-0073-a45a-3acbf27122ba",
+      "tags": {}
+    },
+    {
+      "path": "~/.xmobarrc",
+      "guid": "905f1a1d-4e2e-32f3-6bec-f56c1a1809d5",
+      "tags": {}
     }
   ]
 }
