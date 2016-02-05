@@ -19,6 +19,11 @@
       "path": "~/.Xresources",
       "guid": "f0150a6d-8ae3-c268-1ee5-19e2f39c5c26",
       "tags": {}
+    },
+    {
+      "path": ".xprofile",
+      "guid": "332f0939-9a93-9fb3-bb70-560f4803daf7",
+      "tags": {}
     }
   ]
 }
