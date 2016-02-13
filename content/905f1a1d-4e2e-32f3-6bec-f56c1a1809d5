@@ -7,11 +7,11 @@ Config { font = "-misc-fixed-*-*-*-*-12-*-*-*-*-*-*-*"
                     , Run Swap ["-t","S:<used>M"] 50
                     , Run Date "%a %b %_d %k:%M:%S" "date" 50
                     , Run Battery ["-t","<watts>W<left>(<timeleft>)","-L","15","-l","red","--","-p","green"] 50
-                    , Run Wireless "wlan0" ["-L","30","-H","80","--low","red","--high","green"] 50
+                    , Run Wireless "wlp3s0" ["-L","30","-H","80","--low","red","--high","green"] 50
                     , Run CommandReader "/home/matthias/scripts/notify-volume.sh" "vol"
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% %battery% %vol% %wlan0wi% <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% %battery% %vol% %wlp3s0wi% <fc=#ee9a00>%date%</fc>"
        }
